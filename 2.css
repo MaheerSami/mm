@@ -1,0 +1,189 @@
+/* Define color palette using CSS variables */
+:root {
+    --primary-color: #0066cc;    /* Blue */
+    --secondary-color: #333333;  /* Dark Gray */
+    --accent-color: #ff6600;     /* Orange */
+    --background-color: #ffffff; /* Light Gray */
+    --button-hover-color: #00ff88; /* Dark Blue for button hover */
+    --fb-button-color: #1877F2;  /* Facebook Blue */
+    --fb-button-hover: #1568c3;  /* Darker Facebook Blue */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color); /* Blue */
+    padding: 20px 0;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Our Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Service Item */
+.service-item {
+    background-color: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Slightly lift the item */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.service-item h3 {
+    color: var(--primary-color); /* Blue for title */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.service-link button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-link button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fb-message-btn {
+    display: inline-block;
+    background-color: var(--fb-button-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fb-message-btn:hover {
+    background-color: var(--fb-button-hover);
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: rgb(59, 15, 15);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-button, .fb-message-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 100%;  /* Make buttons full-width on smaller screens */
+    }
+
+    .services h2 {
+        font-size: 2rem;  /* Adjust service section title */
+    }
+
+    .service-item {
+        margin: 10px 0;
+        padding: 20px;
+    }
+}
